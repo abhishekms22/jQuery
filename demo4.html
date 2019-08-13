@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#p2").hide();
+            $("#p1").hide();
+            });
+        $(document).ready(function(){
+            
+          $("#Beginner").click(function(){
+            $("#p2").toggle();
+          });
+          $("#Advanced").click(function(){
+            $("#p1").toggle();
+          });
+        });
+        </script>
+</head>
+<body>
+    <p id="p1"><ul>
+        <li>Servlets</li>
+        <li>JSP</li>
+        <li>Hibernate</li>
+    </ul></p>
+
+    <p id="p2"><ul>
+        <li>core Java</li>
+        <li>JavaScript</li>
+    </ul></p>
+<button id="Beginner">Advanced</button>
+<button id="Advanced">Beginner</button>
+</body>
+</html>
