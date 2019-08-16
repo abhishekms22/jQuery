@@ -3,10 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Executing a function on click event in jQuer</title>
+    <title>Showing ajax load request status in jQuery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("box").load("animate.html", function(responseTxt, statusTxt, jqXHR){
+                    if(statusTxt=="success"){
+                        alert("New content loaded successfully");
+                    }
+                    if(statusTxt=="error"){
+                        alert("Error: "+jwXHR.status + " ")+jqXHR.statusText
+                        
+                    }
+
+                })
+            })
+        })
+    </script>
 </head>
 <body>
     
